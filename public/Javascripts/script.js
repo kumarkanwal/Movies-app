@@ -23,8 +23,7 @@ async function getApiData(movieName) {
     try {
 
         const myAPIKey = "a9e57115";
-        const URL = `http://www.omdbapi.com/?apikey=${myAPIKey}&t=${movieName}`;
-
+        const URL = `https://www.omdbapi.com/?apikey=${myAPIKey}&t=${movieName}`;
         let apiData = await fetch(URL);
         let response = await apiData.json();
 
