@@ -1,0 +1,137 @@
+:root {
+  --main-color: rgb(106, 222, 226);
+  --sec-color: rgb(246, 230, 0);
+  --white: #ffffffaa;
+  --green: #538f90;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+header {
+  padding: 15px;
+  background: var(--main-color);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: var(--sec-color);
+  font-weight: bold;
+  font-size: 16px;
+}
+footer {
+  text-align: center;
+  color: var(--white);
+  padding: 10px;
+  background: var(--green);
+}
+
+main {
+  min-height: 90vh;
+}
+
+.movie-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-block: 40px;
+}
+
+.movieCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ececec;
+  border-radius: 5px;
+}
+.moviePoster_cont {
+  display: flex;
+  justify-content: center;
+
+  width: 400px;
+}
+
+.moviePoster_cont img {
+  border-radius: 10px 0px 0px 10px;
+  width: 100%;
+}
+
+.movieDetails_cont {
+  width: 500px;
+  padding: 25px 20px;
+}
+
+.movieDetails_cont h1 {
+  text-align: center;
+  font-weight: 500;
+}
+.movieDetails_cont .rating {
+  text-align: center;
+}
+
+.movieDetails_cont * {
+  margin-block: 7px;
+}
+
+.movieGenre {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px;
+  justify-content: center;
+  color: rgb(255, 249, 239);
+}
+
+.movieGenre * {
+  padding: 7px 20px;
+  margin-inline: 10px;
+  border-radius: 5px;
+  background: rgb(46, 46, 46);
+  font-weight: 600;
+}
+@media screen and (max-width: 920px) {
+  .movieCard {
+    flex-direction: column;
+  }
+  .moviePoster_cont img {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .moviePoster_cont {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .movieDetails_cont {
+    width: 100%;
+    padding: 25px 20px;
+  }
+}
